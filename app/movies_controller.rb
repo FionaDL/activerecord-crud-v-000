@@ -1,3 +1,5 @@
+
+require 'pry'
 # Replace the '__' in the below methods to to make the specs pass!
 # Each '__' corresponds to a single line of code you will need to write.
 # See the example below on the left and how it should look on the right.
@@ -42,6 +44,7 @@ end
 
 def can_get_size_of_the_database
   Movie.size
+  binding.pry
 end
 
 def can_find_the_first_item_from_the_database_using_id

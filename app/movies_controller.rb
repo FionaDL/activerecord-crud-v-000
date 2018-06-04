@@ -62,7 +62,8 @@ def can_find_using_where_clause_and_be_sorted
   # release date descending
   movies = Movie.all.map do |movie|
     if movie.release_date > 2002
-    movie.release_date
+      movie.release_date
+    end
   end
   binding.pry
   movies

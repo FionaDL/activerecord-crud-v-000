@@ -83,6 +83,7 @@ def can_update_multiple_items_at_once
   5.times do |i|
     movie =Movie.create(title: "Movie_#{i}", release_date: 2000+i)
     movie.update(title: "A Movie")
+    movie.save
   end
   __
 end

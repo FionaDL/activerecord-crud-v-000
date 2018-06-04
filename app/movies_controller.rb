@@ -99,5 +99,5 @@ def can_destroy_all_items_at_once
     Movie.create(title: "Movie_#{i}")
   end
   binding.pry
-  Movie.all.delete
+  Movie.all.clear
 end

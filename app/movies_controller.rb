@@ -65,8 +65,8 @@ def can_find_using_where_clause_and_be_sorted
       movie
     end
   end
-  binding.pry
-  movies
+  movies.each do |movie|
+    t[:release_date]
 end
 
 def can_be_found_updated_and_saved

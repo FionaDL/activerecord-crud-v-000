@@ -25,13 +25,14 @@ def can_be_created_with_a_hash_of_attributes
 end
 
 def can_be_created_in_a_block(args = {title:, release_date:, director:, lead:, in_theaters:})
-  Movie.create do |m|
-    m.title = args[:title]
-    m.release_date = args[:release_date]
-    m.director = args[:director]
-    m.lead = args[:lead]
-    m.in_theaters = args[:in_theaters]
+    movie = Movie.create do |m|
+      m.title = args[:title]
+      m.release_date = args[:release_date]
+      m.director = args[:director]
+      m.lead = args[:lead]
+      m.in_theaters = args[:in_theaters]
   end
+  movie.save
 end
 
 def can_get_the_first_item_in_the_database

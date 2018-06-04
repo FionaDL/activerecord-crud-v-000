@@ -60,15 +60,7 @@ end
 def can_find_using_where_clause_and_be_sorted
   # For this test return all movies released after 2002 and ordered by
   # release date descending
-  movies = Movie.all.map do |movie|
-    if movie.release_date > 2002
-      movie
-    end
-  end
-  movies.each do |movie|
-    t[:release_date]
-    binding.pry
-  end
+  Movie.where("release_date > 2002").order(release_date: :desc)
 end
 
 def can_be_found_updated_and_saved
